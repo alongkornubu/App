@@ -4,43 +4,32 @@ import Logo from '../../../assets/images/logo.jpg';
 import CustomInput from '../../components/Custominput';
 import CustomButton from '../../components/CustomButton';
 import { useNavigation } from '@react-navigation/native';
-//navigation
 
-
-
-const SiginScreen = () => {
+const SignUpScreen = () => {
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
 
   const {height} = useWindowDimensions();
- const navigation =useNavigation();
-  const onSignInPressed = () => {
-      
-      console.warn("sign in");
-    //validation user
-navigation.navigate('Home');
-   
-  }
-const onSignUpPress = () =>{
-  console.warn('onSignUpPress');
-  navigation.navigate('SignUp')
+  //navigation
+  const navigation =useNavigation();
 
-}
+  const onSignUpPress = () => {
+    console.warn("OnSignInPressed");
+     navigation.navigate("SignIn");
+  }
+
   const onFogotPasswordPressed = () => {
     console.warn('onFogotPasswordPressed');
   }
 
-
-
-
   return (
     <View style={styles.root}>
+      <Text style={styles.title}>Create an account</Text>
         {/* <Image 
         source={Logo} 
         style={[styles.logo,{height: height* 0.3}]} 
         resizeMode='contain'
         /> */}
-        <Text style={styles.title}> Sign in</Text>
        
         <CustomInput 
           placeholder="Username" 
@@ -51,11 +40,16 @@ const onSignUpPress = () =>{
           placeholder="Password" 
           value={password} 
           setValue={setPassword}
-          secueTextEntry
+          // secueTextEntry
         />
-        <CustomButton text= 'Sign in' onPress= {onSignInPressed}/>
-        <CustomButton text='Sign Up' onPress={onSignUpPress}/>
-      
+        <CustomInput
+          placeholder="ConfirmPassword" 
+          value={password} 
+          setValue={setPassword}
+          // secueTextEntry
+        />
+        <CustomButton text= 'Sign Up' onPress= {onSignUpPress}/>
+        {/* <CustomButton text= 'for got password ?' onPress= {onFogotPasswordPressed}/> */}
     </View>
   );
 }
@@ -78,4 +72,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SiginScreen
+export default SignUpScreen
