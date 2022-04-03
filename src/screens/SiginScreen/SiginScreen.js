@@ -13,13 +13,13 @@ const SiginScreen = () => {
   const [password,setPassword] = useState('');
 
   const {height} = useWindowDimensions();
- const navigation =useNavigation();
+  // navigation
+  const navigation =useNavigation();
+  
   const onSignInPressed = () => {
-      
       console.warn("sign in");
     //validation user
-navigation.navigate('Home');
-   
+      navigation.navigate('Home');
   }
 const onSignUpPress = () =>{
   console.warn('onSignUpPress');
