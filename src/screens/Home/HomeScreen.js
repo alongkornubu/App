@@ -3,7 +3,7 @@ import React from 'react'
 import CustomButton from '../../components/CustomButton';
 import Custominput from '../../components/Custominput';
 import { useNavigation } from '@react-navigation/native';
-import { RadioButton } from 'react-native-paper';
+import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button'
 
 const Home = () => {
   const navigation = useNavigation();
@@ -21,9 +21,10 @@ const Home = () => {
       <Text>อายุ</Text>
       <Text>เพศ</Text>
       <Text>อุณหภูมิ</Text>
-      <Text>อยู่ในกลุ่ม</Text>
-      
-      
+      <RadioGroup>
+        <RadioButton></RadioButton>
+      </RadioGroup>
+      <Text>อยู่ในกลุ่ม</Text>     
       <Text>กลุ่มเสี่ยง</Text>
       <Text>ผู้ติดเชื้อ T-Virus</Text>
     <CustomButton text='กรอกแบบฟอร์ม' onPress={onPressForm}/>
