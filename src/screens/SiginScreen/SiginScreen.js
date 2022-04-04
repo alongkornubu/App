@@ -35,11 +35,6 @@ const onSignUpPress = () =>{
 
   return (
     <View style={styles.root}>
-        {/* <Image 
-        source={Logo} 
-        style={[styles.logo,{height: height* 0.3}]} 
-        resizeMode='contain'
-        /> */}
         <Text style={styles.title}> Sign in</Text>
        
         <CustomInput 
@@ -55,6 +50,12 @@ const onSignUpPress = () =>{
         />
         <CustomButton text= 'Sign in' onPress= {onSignInPressed}/>
         <CustomButton text='Sign Up' onPress={onSignUpPress}/>
+
+        <Image 
+        source={Logo} 
+        style={[styles.logo,{height: height* 0.3}]} 
+        resizeMode='contain'
+        />
       
     </View>
   );
@@ -66,9 +67,10 @@ const styles = StyleSheet.create({
     padding:20,
   },
     logo:{
-        width:100,
-        maxWidth:300,
-        maxHeight:200,
+        width: '70%',
+        maxWidth: 300,
+        maxHeight: 300,
+        marginVertical: 30,
     },
     title:{
       fontSize:24,
