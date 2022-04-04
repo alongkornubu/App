@@ -56,8 +56,8 @@ const FormScreen = () => {
 
 const styles = StyleSheet.create({
   input:{
-    width: '20%',
-    height:'5%',
+    width: '50%',
+    height:'5.5%',
     borderColor: '#e8e8e8',
     backgroundColor:'white',
     borderWidth:3,
