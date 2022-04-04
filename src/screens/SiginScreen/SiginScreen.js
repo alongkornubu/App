@@ -26,11 +26,6 @@ const onSignUpPress = () =>{
   navigation.navigate('SignUp')
 
 }
-  const onFogotPasswordPressed = () => {
-    console.warn('onFogotPasswordPressed');
-  }
-
-
 
 
   return (

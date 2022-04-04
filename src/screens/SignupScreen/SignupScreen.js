@@ -25,12 +25,6 @@ const SignUpScreen = () => {
   return (
     <View style={styles.root}>
       <Text style={styles.title}>Create an account</Text>
-        {/* <Image 
-        source={Logo} 
-        style={[styles.logo,{height: height* 0.3}]} 
-        resizeMode='contain'
-        /> */}
-       
         <CustomInput 
           placeholder="Username" 
           value={username} 
@@ -49,7 +43,11 @@ const SignUpScreen = () => {
           // secueTextEntry
         />
         <CustomButton text= 'Sign Up' onPress= {onSignUpPress}/>
-        {/* <CustomButton text= 'for got password ?' onPress= {onFogotPasswordPressed}/> */}
+        <Image 
+        source={Logo} 
+        style={[styles.logo,{height: height* 0.3}]} 
+        resizeMode='contain'
+        />
     </View>
   );
 }
@@ -60,9 +58,10 @@ const styles = StyleSheet.create({
     padding:20,
   },
     logo:{
-        width:100,
-        maxWidth:300,
-        maxHeight:200,
+      width: '70%',
+      maxWidth: 300,
+      maxHeight: 300,
+      marginVertical: 30,
     },
     title:{
       fontSize:24,
