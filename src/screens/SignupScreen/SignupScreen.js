@@ -18,9 +18,7 @@ const SignUpScreen = () => {
      navigation.navigate("SignIn");
   }
 
-  const onFogotPasswordPressed = () => {
-    console.warn('onFogotPasswordPressed');
-  }
+  
 
   return (
     <View style={styles.root}>
