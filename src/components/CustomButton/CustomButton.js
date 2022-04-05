@@ -11,14 +11,14 @@ const CustomButton = ({onPress,text}) => {
 
 const styles = StyleSheet.create({
     container:{
-        marginVertical:5,
-        alignItems:'center',
+      marginVertical:5,
+      alignItems:'center',
 
     },
     text:{
-        fontWeight:'bold',
-        color:'white',
-
+      fontWeight:'bold',
+      fontSize: 16,
+      color:'white',
     },
 });
 

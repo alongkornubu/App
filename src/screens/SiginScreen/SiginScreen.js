@@ -47,7 +47,7 @@ const onSignUpPress = () =>{
           <View style={styles.button1}>
             <CustomButton text= 'Sign in' onPress= {onSignInPressed}/>
           </View>
-          
+          <View style={styles.space} />
           <View style={styles.button2}>
             <CustomButton text='Sign Up' onPress={onSignUpPress}/>
           </View>
@@ -88,17 +88,20 @@ const styles = StyleSheet.create({
     button1: {
       backgroundColor:'red',
       width:'40%',
-      padding:15,
+      padding:8,
       marginVertical:5,
-      borderRadius:10,
+      borderRadius:7,
 
     },
     button2: {
       backgroundColor:'#3B71F3',
       width:'40%',
-      padding:15,
+      padding:8,
       marginVertical:5,
-      borderRadius:10,
+      borderRadius:7,
+    },
+    space: {
+      width: '15%',
     },
 })
 

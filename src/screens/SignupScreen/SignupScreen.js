@@ -40,7 +40,10 @@ const SignUpScreen = () => {
           setValue={setPassword}
           // secueTextEntry
         />
-        <CustomButton text= 'Sign Up' onPress= {onSignUpPress}/>
+        <View style={styles.button}>
+          <CustomButton text= 'Sign Up' onPress= {onSignUpPress}/>
+        </View>
+
         <Image 
         source={Logo} 
         style={[styles.logo,{height: height* 0.3}]} 
@@ -55,18 +58,25 @@ const styles = StyleSheet.create({
     alignItems:'center',
     padding:20,
   },
-    logo:{
-      width: '70%',
-      maxWidth: 300,
-      maxHeight: 300,
-      marginVertical: 30,
-    },
-    title:{
-      fontSize:24,
-      fontWeight:'bold',
-      color:'#051C68',
-      margin:10
-    }
+  logo:{
+    width: '70%',
+    maxWidth: 300,
+    maxHeight: 300,
+    marginVertical: 30,
+  },
+  title:{
+    fontSize:24,
+    fontWeight:'bold',
+    color:'#051C68',
+    margin:10,
+  },
+  button: {
+    backgroundColor:'#3B71F3',
+    width:'100%',
+    padding:8,
+    marginVertical: 10,
+    borderRadius:7,
+  }
 })
 
 export default SignUpScreen

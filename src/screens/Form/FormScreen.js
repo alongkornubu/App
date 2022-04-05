@@ -64,8 +64,9 @@ const FormScreen = () => {
           </RadioGroup>
       </View>
       
-
-      <CustomButton text='Submit' onPress={onPressToHome}/>
+      <View style={styles.button}>
+        <CustomButton text='Submit' onPress={onPressToHome}/>
+      </View>
     </View>
   );
 }
@@ -120,7 +121,13 @@ const styles = StyleSheet.create({
     marginVertical:15,
     fontSize: 16,
   },
-  
+  button: {
+    backgroundColor:'#3B71F3',
+    borderRadius: 7,
+    height: 50,
+    padding: 8,
+    top: 10,
+  }
 });
 
 
