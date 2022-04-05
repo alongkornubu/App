@@ -43,8 +43,16 @@ const onSignUpPress = () =>{
           setValue={setPassword}
           secueTextEntry
         />
-        <CustomButton text= 'Sign in' onPress= {onSignInPressed}/>
-        <CustomButton text='Sign Up' onPress={onSignUpPress}/>
+        <View style={styles.buttons}>
+          <View style={styles.button1}>
+            <CustomButton text= 'Sign in' onPress= {onSignInPressed}/>
+          </View>
+          
+          <View style={styles.button2}>
+            <CustomButton text='Sign Up' onPress={onSignUpPress}/>
+          </View>
+        </View>
+        
 
         <Image 
         source={Logo} 
@@ -72,7 +80,26 @@ const styles = StyleSheet.create({
       fontWeight:'bold',
       color:'#051C68',
       margin:10
-    }
+    },
+    buttons: {
+      flexDirection: 'row',
+      marginVertical: 15,
+    },
+    button1: {
+      backgroundColor:'red',
+      width:'40%',
+      padding:15,
+      marginVertical:5,
+      borderRadius:10,
+
+    },
+    button2: {
+      backgroundColor:'#3B71F3',
+      width:'40%',
+      padding:15,
+      marginVertical:5,
+      borderRadius:10,
+    },
 })
 
 export default SiginScreen
