@@ -1,4 +1,4 @@
-import { View, Text, TextInput , StyleSheet} from 'react-native'
+import { View, Text, TextInput , StyleSheet, SafeAreaView, ScrollView} from 'react-native'
 import React from 'react'
 import CustomButton from '../../components/CustomButton'
 import Custominput from '../../components/Custominput';
@@ -12,62 +12,67 @@ const FormScreen = () => {
     navigation.navigate("Home");
   }
   return (
-    <View style={styles.container}>
-      <Text style={styles.textcovid}>กรอกแบบฟอร์มข้อมูล COVID-19</Text>
-      <View style={styles.view1}>
-        <Text>ชื่อ  </Text>
-          <TextInput style={styles.input}/>
-        <Text>  นามสกุล  </Text>
-          <TextInput style={styles.input}/>
-      </View>
-      <View style={styles.view2}>
-        <Text>อายุ  </Text>
-          <TextInput style={styles.input}/>
-        <Text>  เพศ  </Text>
-          <RadioGroup style={styles.radiogroup1}>
-            <RadioButton value={1}>
-              <Text>ชาย </Text>
-            </RadioButton>
-            <RadioButton value={1}>
-              <Text>หญิง </Text>
-            </RadioButton>
-        </RadioGroup>
-      </View>
+    <SafeAreaView>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.textcovid}>กรอกแบบฟอร์มข้อมูล COVID-19</Text>
+          <View style={styles.view1}>
+            <Text>ชื่อ  </Text>
+              <TextInput style={styles.input}/>
+            <Text>  นามสกุล  </Text>
+              <TextInput style={styles.input}/>
+          </View>
+          <View style={styles.view2}>
+            <Text>อายุ  </Text>
+              <TextInput style={styles.input}/>
+            <Text>  เพศ  </Text>
+              <RadioGroup style={styles.radiogroup1}>
+                <RadioButton value={1}>
+                  <Text>ชาย </Text>
+                </RadioButton>
+                <RadioButton value={1}>
+                  <Text>หญิง </Text>
+                </RadioButton>
+            </RadioGroup>
+          </View>
 
-      <View style={styles.view3}>
-        <Text>อุณหภูมิ  </Text>
-          <TextInput style={styles.input}/>
+          <View style={styles.view3}>
+            <Text>อุณหภูมิ  </Text>
+              <TextInput style={styles.input}/>
+              
+          </View>
+
+          <View style={styles.view4}>
+            <Text>หมายเลขโทรศัพท์มือถือ  </Text>
+                <TextInput style={styles.input}/>
+          </View>
+
+          <View style={styles.view5}>
+            <Text>ที่อยู่อาศัย  </Text>
+                <Custominput style={styles.custominput1} placeholder="ที่อยู่"/>
+          </View>
+
+          <View>
+            <Text>ส่วนที่1</Text>
+            <Text>ข้อมูลการคัดกรองผู้ที่มีความเสี่ยงเข้าเกณฑ์ต้องสอบสวนโรค</Text>
+            <Text>1. ประวัติการเดินทางมาจากต่างประเทศในช่วง 1 เดือนที่ผ่านมา </Text>
+              <RadioGroup style={styles.radiogroup2}>
+                <RadioButton>
+                  <Text> ใช่</Text>
+                </RadioButton>
+                <RadioButton>
+                  <Text> ไม่ใช่</Text>
+                </RadioButton>
+              </RadioGroup>
+          </View>
           
-      </View>
-
-      <View style={styles.view4}>
-        <Text>หมายเลขโทรศัพท์มือถือ  </Text>
-            <TextInput style={styles.input}/>
-      </View>
-
-      <View style={styles.view5}>
-        <Text>ที่อยู่อาศัย  </Text>
-            <Custominput style={styles.custominput1} placeholder="ที่อยู่"/>
-      </View>
-
-      <View>
-        <Text>ส่วนที่1</Text>
-        <Text>ข้อมูลการคัดกรองผู้ที่มีความเสี่ยงเข้าเกณฑ์ต้องสอบสวนโรค</Text>
-        <Text>1. ประวัติการเดินทางมาจากต่างประเทศในช่วง 1 เดือนที่ผ่านมา </Text>
-          <RadioGroup style={styles.radiogroup2}>
-            <RadioButton>
-              <Text> ใช่</Text>
-            </RadioButton>
-            <RadioButton>
-              <Text> ไม่ใช่</Text>
-            </RadioButton>
-          </RadioGroup>
-      </View>
-      
-      <View style={styles.button}>
-        <CustomButton text='Submit' onPress={onPressToHome}/>
-      </View>
-    </View>
+          <View style={styles.button}>
+            <CustomButton text='Submit' onPress={onPressToHome}/>
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+    
   );
 }
 
